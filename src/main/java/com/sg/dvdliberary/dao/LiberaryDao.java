@@ -160,4 +160,50 @@ public DVD nullChecker(String movieTitle)
     
     
     
+
+
+/*
+
+
+
+
+
+Find the average age of the movies in the collection
+Find the newest movie in your collection
+Find the oldest movie in your collection
+Find the average number of notes associated with movies in your collection
+*/
+
+/**
+    *Returns an String Array of all DVD's in Liberary
+    *@return String list of all DVD titles
+     * @throws com.sg.dvdliberary.dao.LiberaryDaoException
+    */
+    
+    List<DVD> findAllMoviewByReleaseDate(String releaseDate)
+    throws LiberaryDaoException;
+    
+    List<DVD> findMoviesByRating(String rating)
+    throws LiberaryDaoException;
+    
+    
+    //When searching by director, the movies should be sorted into separate data structures by MPAA rating.
+    List<DVD> findAllMoviesByDirector(String Director)
+            throws LiberaryDaoException;
+    
+    List<DVD> findAllMoviesByStudio(String studio)
+            throws LiberaryDaoException;
+    
+    int findAvgAgeOfCollection()
+            throws LiberaryDaoException;
+    
+    DVD findNewestMovieInCollection()
+    
+            throws LiberaryDaoException;
+    
+    DVD findOldestMovieInCollection()
+            throws LiberaryDaoException;
+    
+    float findAvgLengthOfComment()
+            throws LiberaryDaoException;
 }

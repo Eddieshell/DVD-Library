@@ -211,5 +211,48 @@ public class LiberaryDaoFileImpl implements LiberaryDao {
         out.close();
 
     }
+    
+    // The following methods are for the Search Feature
+    // being implemented in version 2.
+
+    @Override
+    public List<DVD> findAllMoviewByReleaseDate(String releaseDate) throws LiberaryDaoException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<DVD> findMoviesByRating(String rating) throws LiberaryDaoException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<DVD> findAllMoviesByDirector(String Director) throws LiberaryDaoException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<DVD> findAllMoviesByStudio(String studio) throws LiberaryDaoException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int findAvgAgeOfCollection() throws LiberaryDaoException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public DVD findNewestMovieInCollection() throws LiberaryDaoException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public DVD findOldestMovieInCollection() throws LiberaryDaoException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public float findAvgLengthOfComment() throws LiberaryDaoException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
