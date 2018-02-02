@@ -32,9 +32,10 @@ public class LiberaryView {
         io.print("4. List All DVD's");
         io.print("5. Information about DVD");
         io.print("6. Search for DVD by keyword.");
-        io.print("7. EXIT");
+        io.print("7. Advanced Search.");
+        io.print("8. EXIT");
 
-        return io.readInt("Please make a selection from the options above.", 1, 7);
+        return io.readInt("Please make a selection from the options above.", 1, 8);
 
     }
 
@@ -211,5 +212,33 @@ public class LiberaryView {
 	    io.print("=== ERROR ===");
 	    io.print(errorMsg);
 	}
+    
+    // The following code is forversion 2 
+    // Addition of a search feature
+    // Lambdas and Streams
+    
+    public int getUsersSearchChoice(){
+        int searchMethod;
+        
+        io.print("=== DVD SEARCH MENU ===");
+        io.print("1. Find all movies released within specified number of years.");
+        io.print("2. Find all the movies with a given MPAA rating.");
+        io.print("3. Find all the movies by a given director.");
+        io.print("4. Find all the movies released by a particular studio.");
+        io.print("5. Find the average age of the movies in the collection.");
+        io.print("6. Find the newest movie in your collection.");
+        io.print("7. Find the oldest movie in your collection.");
+        io.print("8. Find the average number of notes.");
+        io.print("9. EXIT");
+        
+        searchMethod = io.readInt("Choose a field to edit from Menu", 1, 9);
+        return searchMethod;
+        
+    }
+    
+    public void exitSearchMenuMessage() {
+        io.readString("Leaving the Search Menu \nPleae"
+                + " press ENTER to return to MAIN MENU");
+    }
 
 }
