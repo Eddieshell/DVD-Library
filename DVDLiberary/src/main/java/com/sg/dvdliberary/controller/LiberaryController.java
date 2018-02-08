@@ -65,12 +65,8 @@ public class LiberaryController {
                     case 6:
                         searchByKeyword();
                         break;
-                        
-                    case 7:
-                        searchLibrary();
-                        break;
 
-                    case 8:
+                    case 7:
                         keepRunning = false;
                         break;
 
@@ -175,9 +171,6 @@ public class LiberaryController {
                         case 6:
                             edituserComment();
                             break;
-                            
-                        
-                            
 
                         case 7:
                             runMeathod = false;
@@ -289,79 +282,6 @@ public class LiberaryController {
 
         }
 
-    }
-    
-    // The following code is for version two
-    // The addition of a search feature for the Library.
-    // Use of Lambda and Streams
-    
-    private void searchLibrary(){
-        boolean runSearch = true;
-        int searchFeature;
-       
-        while(runSearch){
-            
-            searchFeature = getUsersSearchChoice();
-            
-            switch(searchFeature) {
-                case 1:
-                    System.out.println("Find all movies released within specified number of years.");
-                    break;
-                    
-                case 2:
-                    System.out.println("Find all the movies with a given MPAA rating");
-                    break;
-                    
-                case 3:
-                    System.out.println("Find all the movies by a given director");
-                    break;
-                    
-                case 4:
-                    System.out.println("Find all the movies released by a particular studio");
-                    break;
-                    
-                case 5:
-                    System.out.println("Find the average age of the movies in the collection");
-                    break;
-                    
-                case 6:
-                    System.out.println("Find the newest movie in your collection");
-                    break;
-                    
-                case 7:
-                    System.out.println("Find the oldest movie in your collection");
-                    break;
-                    
-                case 8:
-                    System.out.println("Find the average number of notes");
-                    break;
-                    
-                case 9:
-                    System.out.println("EXIT");
-                    runSearch = false;
-                    
-                    
-                default:
-                    System.out.println("Unknown command");
-                
-            }
-            
-        }
-        
-        exitSearchFeature();
-        
-    }
-    
-    private int getUsersSearchChoice(){
-        return view.getUsersSearchChoice();
-    }
-    
-    private void exitSearchFeature(){
-        view.exitSearchMenuMessage();
-    }
-    
-    private void getMovieByRating(){
-        
     }
 
 }
