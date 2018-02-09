@@ -1,6 +1,9 @@
 C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\App.java
 C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\controller\LiberaryController.java
 C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\dao\LiberaryDaoException.java
+C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\dao\auditDaoImpl.java
+C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\advice\LoggingAdvice.java
+C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\dao\auditDao.java
 C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\ui\UserIOConsoleImpl.java
 C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\ui\LiberaryView.java
 C:\Users\Eddie\Documents\NetBeansProjects\DVDLiberary\src\main\java\com\sg\dvdliberary\ui\UserIO.java

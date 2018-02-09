@@ -19,15 +19,38 @@
     
     <bean id="userIO" class="com.sg.dvdliberary.ui.UserIOConsoleImpl"/>
     
-    <bean id="myView" class="com.sg.dvdLiberary.ui.LiberaryView">
+    <bean id="myView" class="com.sg.dvdliberary.ui.LiberaryView">
         <constructor-arg ref="userIO"/>
     </bean>
     
-    <bean id="myDao" class="com.sg.dvdliberarydao.LiberaryDaoFileImpl"/> 
+    <bean id="myDao" class="com.sg.dvdliberary.dao.LiberaryDaoFileImpl"/> 
         
     <bean id="controller" class="com.sg.dvdliberary.controller.LiberaryController">
         <constructor-arg ref="myDao"/>
         <constructor-arg ref="myView"/> 
     </bean>
+    
+    <bean id="auditDao" class="com.sg.dvdliberary.dao.auditDaoImpl"/>
+    
+    <bean id="loggingAdvice" class="com.sg.dvdliberary.advice.LoggingAdvice">
+        <constructor-arg ref="auditDao"/>
+    </bean>
+    
+    <aop:config>
+        <aop:aspect ref="loggingAdvice">
+            <aop:after-returning
+            method="createAuditEntry"
+            pointcut="execution(* com.sg.dvdliberary.dao.LiberaryDaoFileImpl.addDVD(..))"
+         />
+         
+        <aop:after-returning
+            method="createAuditEntry"
+            pointcut="execution(* com.sg.dvdliberary.dao.LiberaryDaoFileImpl.removeDVD(..))"
+         />
+           
+        </aop:aspect>
+    </aop:config>
+    
+    
     
 </beans>

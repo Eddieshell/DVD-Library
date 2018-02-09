@@ -71,6 +71,13 @@ public class DVD {
     public void setUserNotes(String userNotes) {
         this.userNotes = userNotes;
     }
+
+    @Override
+    public String toString() {
+        return "DVD{" + "title=" + title + '}';
+    }
+    
+    
     
     
     
