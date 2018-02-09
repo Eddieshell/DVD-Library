@@ -25,7 +25,8 @@ public class App {
         ApplicationContext ctx =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         
-        ctx.getBean("controller", LiberaryController.class);
+        LiberaryController controller = ctx.getBean("controller", LiberaryController.class);
+        controller.run();
     }
 
 }
